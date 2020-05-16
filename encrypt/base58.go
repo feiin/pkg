@@ -11,17 +11,17 @@ const Alphabet = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
 var bigRadix = big.NewInt(58)
 var bigZero = big.NewInt(0)
 
-//Decode58 decodes a modified base58 string to a byte slice, using BTCAlphabet
+//Decode58 decodes a modified base58 string to a byte slice
 func Decode58(b string) []byte {
 	return DecodeAlphabet(b, Alphabet)
 }
 
-// Encode58 encodes a byte slice to a modified base58 string, using BTCAlphabet
+// Encode58 encodes a byte slice to a modified base58 string
 func Encode58(b []byte) string {
 	return EncodeAlphabet(b, Alphabet)
 }
 
-// DecodeAlphabet decodes a modified base58 string to a byte slice, using alphabet.
+// DecodeAlphabet decodes a modified base58 string to a byte slice
 func DecodeAlphabet(b, alphabet string) []byte {
 	answer := big.NewInt(0)
 	j := big.NewInt(1)
