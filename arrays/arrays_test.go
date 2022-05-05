@@ -7,7 +7,7 @@ import (
 func TestArrayTEqual(t *testing.T) {
 	var a = []int{1, 2, 3, 4}
 	var b = []int{1, 2, 3, 4}
-	if !Equal(a, b) {
+	if !Equal[int](a, b) {
 		t.Errorf("not equal to b")
 	}
 }
